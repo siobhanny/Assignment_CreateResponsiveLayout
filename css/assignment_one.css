@@ -3,4 +3,10 @@ Implement your CSS code in this file. Do not change anything in any other file.
 Only this will be graded.
 */
 
+header {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}   
+
 
