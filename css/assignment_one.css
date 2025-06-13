@@ -4,9 +4,121 @@ Only this will be graded.
 */
 
 header {
-    display: flex;  
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}   
+    padding: 30pt 0;
+}
 
+#mainBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20pt;
+    margin-bottom: 50px;
+}
 
+#topMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+#leftContainer {
+    display: flex;
+    flex-grow: 1;
+    padding-right: 20pt;
+}
+
+#rightContainer {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(4, 160px);
+    grid-template-areas:
+        'zero zero one two'
+        'zero zero three four'
+        'zero zero five six';
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        width: 60%;
+        align-items: center;
+    }
+
+    #mainBody {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #topMenu {
+        gap: 0;
+    }
+
+    #rightContainer {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 160px);
+        grid-template-areas:
+            'one two'
+            'three four'
+            'five six';
+    }
+
+    .zero {
+        display: none;
+    }
+
+    .display_md {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    body {
+        width: 80%;
+    }
+}
