@@ -15,7 +15,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px;
+    gap: 100px;
     margin-top: 20pt;
     margin-bottom: 50px;
 }
@@ -30,7 +30,7 @@ header {
 #leftContainer {
     display: flex;
     flex-grow: 1;
-    padding-right: 20pt;
+    padding-right: 10pt;
 }
 
 #rightContainer {
@@ -83,6 +83,7 @@ header {
         display: flex;
         flex-direction: column;
         margin-top: 0;
+        gap: 40px;
     }
 
     header {
